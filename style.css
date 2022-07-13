@@ -1,0 +1,31 @@
+body{
+    font-size: 30 px;
+    margin: 0;
+}
+
+h1{
+    font-size: 200%;
+}
+
+p{
+    font-size: 75%;
+}
+
+a{
+    font-weight: bold;
+    font-size: 24px;
+    background-color: tomato;
+    color:white;
+    padding: 5px 15px;
+    border-radius: 50px;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    background-color: whitesmoke;
+    font-family: Helvetica, sans-serif;
+    height: 200px;
+}

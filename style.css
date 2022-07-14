@@ -1,31 +1,403 @@
-body{
-    font-size: 30 px;
+/* Import Google font API */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* Custom scroll bar*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
-h1{
-    font-size: 200%;
+html{
+    scroll-behavior: smooth;
 }
 
-p{
-    font-size: 75%;
+section{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-right: 0 px;
+    padding-left: 0px;
 }
 
-a{
-    font-weight: bold;
-    font-size: 24px;
-    background-color: tomato;
-    color:white;
-    padding: 5px 15px;
-    border-radius: 50px;
-
+#about {
+    padding: 150px 0;
 }
 
-nav{
+@keyframes about-fade {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    border-color:red;
+    border-style: none;
+}
+
+
+.about, .projects, .skills, .teams, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content,
+.project .proj-content,
+.skills .skills-content,
+.contact .contact-content{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
     display: flex;
-    justify-content: space-around;
-    align-items:center;
-    background-color: whitesmoke;
-    font-family: Helvetica, sans-serif;
-    height: 200px;
+    position: relative;
+    text-align: left;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    width: 200px;
+    border-radius: 20px;
+    background: rgb(183,213,228);
+    justify-content: center;
+}
+.title-text{
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    padding-top:15px;
+    color:black;
+}
+@keyframes nav-load {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+.navbar{
+    position:fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: "Ubuntu", sans-serif;
+    transition: all 0.75s ease;
+    animation: nav-load 500ms ease-out;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: rgb(255, 255, 255);
+}
+.navbar .logo a{
+    color: rgb(189, 189, 189);
+    font-size: 25px;
+    font-weight: 100;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color:rgb(205,205,205);
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color:rgb(0,0,0);
+}
+.navbar.sticky .menu li a:hover{
+    color: rgb(82, 82, 82);
+}
+
+/*style the progress bar*/
+.progress-bar{
+    position:fixed;
+    top : 58.5px;
+    height: 4px;
+    width: 100%;
+    border-radius: 100px;
+    opacity: 60%;
+    background: rgb(0,114, 237);
+    animation: progress 1000ms ease-in;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+@keyframes progress {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+/*menu button styling*/
+.menu-btn{
+    color: rgb(131,131,131);
+    font-size: 23px;
+    cursor:pointer;
+    display: none;
+}
+/*scroll up button styling*/
+.scroll-up-button{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: rgb(20,160,220);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color:#fff;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+/*about section styling*/
+.about .about-content .text-1{
+    color: rgb(60, 60, 60);
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.about .about-content .text-1 span{
+    color: rgb(0, 114, 237);
+    font-size: 42px;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    animation: img-load 400ms ease-out;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right a > img{
+    opacity: 0.35;
+}
+
+@keyframes img-load {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+#linkedin, #github {
+    display: inline-block;
+    background: none;
+    color: rgb(162, 205, 228);
+    font-size: 20px;
+    font-weight: 200;
+    padding: 5px 15px;
+    margin-top: 20px;
+    margin-right: 15px;
+    border-radius: 10px;
+    border: 3px solid rgb(195, 234, 255);
+    transition: all 0.3s ease;
+    animation: button-load 500ms ease-out;
+}
+
+#linkedin:hover, #github:hover{
+    color:rgb(205,205,205);
+    background: rgb(0,114, 237);
+    font-weight:300;
+    border: 3px solid rgb(0,114,237);
+}
+.emoji {
+    padding-right: 15px;
+    font-size: 30px;
+}
+
+/*projects styling*/
+.projects .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-style: none;
+}
+
+.projects .card-container .info{
+    height: 400px;
+    width: 650 px;
+    border-style: none;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.projects .card-container .desc {
+    height: 400px;
+    width: 400px;
+    border-style: none;
+}
+
+.projects .card-container .desc p {
+    text-align: justify;
+    color:rgb(60, 60, 60)
+}
+
+.projects .card-container .desc a {
+    font-weight: 600;
+    color:rgb(60, 60, 60);
+}
+
+.projects .card-container .desc a:hover {
+    color: rgb(0, 114, 237);
+    transition: all 0.5s ease;
+}
+.proj-title-container {
+    display: flex;
+    flex-direction: column;
+}
+.proj-header{
+    padding-top: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.proj-header-first{
+    padding-top: 65px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.proj-title-first{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb (60,60, 60);
+    padding-bottom: 2px;
+}
+.proj-title{
+    padding-bottom: 2px;
+}
+/*project tags*/
+.tag{
+    background: white;
+    border-radius: 45px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    opacity: 70%;
+
+}
+.tag-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+}
+.tag span{
+    font-weight: 600;
+    padding: 7px 12px;
+    opacity:85%;
+}
+/*project's desc-header*/
+.desc-header{
+    padding-top: 65px;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+.desc-header span{
+    padding-top: 7px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(236,248,255);
+}
+
+/* experience styling*/
+#experience{
+    background-image: linear-gradient(to left top, rgb(206, 216, 158), rgb(247, 236, 222));
+
+}
+
+/*gallery styling */
+#art {
+    background-image: linear-gradient(rgb(222, 230, 235), white)
+}
+
+/*footer styling*/
+
+footer{
+     background: rgb(255,255,255);
+     padding: 15px 23px;
+     color:rgb(189,189,189);
+}
+/* global image styling*/
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+.grid-wrapper > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
+}
+
+.grid-wrapper > div > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+
+.grid-wrapper .big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+.grid-wrapper .tall {
+	grid-row: span 2;
 }

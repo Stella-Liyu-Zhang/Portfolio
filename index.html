@@ -5,52 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property = "og:type" content = "website">
     <meta property = "og:url" content = "">
-    <meta property="og:title" content="Stella Zhang" />
+    <meta property="og:title" content="Dance" />
     <meta property="og:description" content="Welcome to Stella Zhang's personal website. Thank you for visiting!" />
 
     <title>Stella Zhang</title>
+    <img rel="stylesheet" href="/websiteimgs/anime.jfif">
     <link rel="stylesheet" href="style.css?v=6">
 
 </head>
 
 <body>
-    <div class = "scroll-up-btn">
-        <i class = "fas fa-angle-up"></iclass></i>
+    <div class="scroll-up-btn">
+        <i class = "fas fa-angle-up"></i>    
     </div>
 <!------------------The NAV BAR---------------------------------------------------------->
-    <nav class = "navbar">
-        <img src="" alt="">
-        <div class = "max-width">
-            <div class = "logo">    <a href="#">Stella <span> Zhang </span> </a>     </div>
-                <ul class = "menu">
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo">    <a href="#">Stella <span> Zhang </span> </a>     </div>
+                <ul class="menu">
                     <li> <a href="#about" class="menu-btn">About </a></li>
                     <li> <a href="#experience" class="menu-btn">Experience</a></li>
                     <li> <a href="#projects" class="menu-btn">Projects</a></li>
                     <li> <a href="#art" class="menu-btn">Art</a></li>
                     <li> <a href="#contact" class="menu-btn">Contact</a></li>
                 </ul>
-            <div class = "menu-btn">
-                <i class = "fas fa-bars"></i>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
-        <div class = "progress-bar" id = "myBar" ></div>
+        <div class="progress-bar" id="myBar" ></div>
     </nav>
 <!---------------------------About------------------------------------------------------->
     <main>
-        <section class = "about" id = "about">
-            <div class = "max-width">
-                <div class = "about-content">
-                    <img src="" alt="My profile picture in anime!">
+        <section class="about" id="about">
+            <div class="max-width">
+                <div class="about-content">
+                    <div class="column left">
+                        <img src="/websiteimgs/anime.jfif" alt="My profile picture in anime!">
+                    </div>
+                    <div class="column right">
+                        <div class="text-1">Hello, my name is  <span class="typing"></span> </div>
+                        <div class="body">
+                            <p>I am a rising senior at UC San Diego, and will be graduating in June 2023. I major in Mathematics and Computer Science, while pursuing a minor in Computer Engineering.</p>
+                            <p>My interest lie in . </p>
+                            <p><span style="font-size: 30px" >&#128205;</span> <span id = "sj">San Diego, CA</span><span id = "email">&#9993;&#65039;</span>l9zhang @ ucsd.edu </p>
+                        </div>
+                        <a href="https://www.linkedin.com/in/stella-liyu-zhang/" id = "linkedin" target="_blank">
+                            <img src="/websiteimgs/githubs.svg" alt="LinkedIn Logo" width="18">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/Stella-Liyu-Zhang" id = "github" target="_blank">
+                            <img src="/websiteimgs/linkedin.svg" alt="GitHub logo" width="18">
+                            GitHub
+                        </a>
+                    </div>
+                 </div>
+            </div>
+        </section>
+<!---------------------------------Experiences------------------------------------------------>
+        <section class="experience" id="experience">
+            <div>
+                <div class="max-width">
+                    <h2 id="hideme" class="title-text">Professional Experience</h2>
                 </div>
-                <div class = "column right">
-                    
+                <h2>haha</h2>
+                <p>
+                    this is a paragraph
+                </p>
+            </div>
+        </section>
+<!--------------------------------Projects---------------------------------------------------->
+        <section class="projects">
+            <div>
+                <div class="max-width">
+                    <h2 id="hideme" class="title-text">Projects</h2>
+                </div>
+                <!----------------------------Project 1------------------------------------>
+                <div class = proj-header-first id = "hideme">
+                    <div class = "proj-title-container">
+                        <div class = "proj-title-first"><span class = "emoji">&#127857;</span>Fan-fan's Website</div>
+                        <div class = "tag-container">
+                            <div class = "tag" style = "background: rgb(173, 220, 173)"><span style = "color: rgb(80, 125, 80)">Web Development</span></div>
+                            <div class = "tag" style = "background: rgb(212, 190, 249);"><span style = "color:rgb(108, 86, 145)">UIUX</span></div>
+                            <div class = "tag" style = "background: rgb(212, 000, 249);"><span style = "color:rgb(108, 86, 145)">Product Management</span></div>
+                        </div>
+                    </div>
+                    <div class = "desc-header"><span>Oct 2021 - Dec 2021</span></div>
+                </div>
+                <div class = "card-container" id = "hideme">
+                    <div class = "info">
+                        <iframe src="https://docs.google.com/presentation/d/1dJldqn5Pz_z3b4G1wNhacElKkuv-86rb9SKAOiDlH2o/present#slide=id.p" frameborder="0" width=647 height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    </div>
+                    <div class = "desc">
+                        <p>In this project, we are leveraging <a href = "https://arxiv.org/pdf/1506.01497.pdf" class = "desc-link">Faster R-CNN </a> and multimodal fusion mechanisms (<a href = "https://arxiv.org/pdf/1904.01649.pdf" class = "desc-link">MVX-Net</a>) to develop a deep learning model that fuses <span style="font-weight:600">2D images</span> and <span style="font-weight:600">3D point clouds</span> to improve autonomous driving action explainability & navigation. Prior work by <a href = “https://arxiv.org/pdf/2003.09405.pdf” class = "desc-link">Xu et. al</a> has demonstrated that multi-task learning improves 2D object detection and provides intuitive explanations for actions performed by an AV. We are aiming to extend upon this work to incorporate the 3D modality in hopes of improving performance in scenarios such as <span style="font-weight:600">bad weather</span> or <span style="font-weight:600">night</span> where the 2D image modality may fail. To gather data, I designed an Amazon MTurk data annotation interface to collect labels on the <a href = “https://waymo.com/intl/en_us/open/about/“ class = "desc-link"> Waymo Open </a> dataset for driver actions and explanations.</p>
+                        <a href = "http://www.allenkcheung.com/mturk-interface/" class = "interface-button" style = "font-weight: 300;background-color: none; color: rgb(112, 166, 196);">Try the annotation interface!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+<!-----------------------------------Gallery---------------------------------------------------->
+        <section class="gallery" id = "art">
+            <div class="max-width">
+                <div class="title">
+                    <div class="title-text">Artwork</div>
+                </div>
+                <div class="grid-wrapper">
+                
+                    <div class="big" id="hideme">
+                        <img src="/websiteimgs/tripleprofile.png" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="tall" id="hideme">
+                        <img src="/websiteimgs/anime.jfif" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="tall" id="hideme">
+                        <img src="/websiteimgs/anime.jfif" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="tall" id="hideme">
+                        <img src="/websiteimgs/tripleprofile.png" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="tall" id="hideme">
+                        <img src="/websiteimgs/tripleprofile.png" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="tall" id="hideme">
+                        <img src="/websiteimgs/tripleprofile.png" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="tall" id="hideme">
+                        <img src="/websiteimgs/tripleprofile.png" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="big" id="hideme">
+                        <img src="/websiteimgs/anime.jfif" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="tall" id="hideme">
+                        <img src="/websiteimgs/tripleprofile.png" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="tall" id="hideme">
+                        <img src="/websiteimgs/tripleprofile.png" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="tall" id="hideme">
+                        <img src="/websiteimgs/tripleprofile.png" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="big" id="hideme">
+                        <img src="/websiteimgs/anime.jfif" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="tall" id="hideme">
+                        <img src="/websiteimgs/tripleprofile.png" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="tall" id="hideme">
+                        <img src="/websiteimgs/tripleprofile.png" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="tall" id="hideme">
+                        <img src="/websiteimgs/tripleprofile.png" alt="TripleProfiles for Stella">
+                    </div>
+                    <div class="big" id="hideme">
+                        <img src="/websiteimgs/anime.jfif" alt="TripleProfiles for Stella">
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+<!-----------------------------------Footer---------------------------------------------------->
     <footer>
-        <p>©Copyright 2022 by Stella Zhang. All rights reversed.</p>
+        <p>© Created by Stella Zhang.2022 All rights reserved.</p>
     </footer>
 </body> 
 </html>

@@ -7,7 +7,9 @@ We are finally jumping to the next step of learning CSS!
 
 ## Acknowledgement
 
-This material is derived from Professor Powell's CSE 134 lecture slides at UC San Diego.
+This material is mainly derived from Professor Powell's CSE 134 lecture slides at UC San Diego.
+
+For question that I came across, I also consulted my mentor *Cam
 
 ## Version of CSS
 These are usually to make sure that the browser gets a new version when the site gets updated with a new version, e.g. as part of our build process we'd have something like this:
@@ -289,6 +291,82 @@ Some useful CSS functions include:
 - || (double bar) separates two or more options, one or more of which must occur, in any order
 - | (single bar) separates two or more options, exactly one of which must occur
 - [ ] can be used to group components 
+## CSS Notes in my Portfolio Project 
+I practice CSS syntaxes and logics by building my portfolio websites!
+Here are some notes that I made in order to track what I learned throughout the whole dev progress.
+
+### "*" 
+---
+The * means "all elements" (a universal selector), so we are setting all elements to have zero margins, and zero padding, thus making them look the same in all browsers.
+
+### Importing Google font API
+---
+How to: 
+```css
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+font-family: 'Poppins', sans-serif;
+```
+
+### html
+---
+The scroll-behavior CSS property sets the behavior for a scrolling box when scrolling is triggered by the navigation or CSSOM scrolling APIs.
+
+```CSS
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Keyword values */
+scroll-behavior: auto;
+scroll-behavior: smooth;
+
+/* Global values */
+scroll-behavior: inherit;
+scroll-behavior: initial;
+scroll-behavior: revert;
+scroll-behavior: revert-layer;
+scroll-behavior: unset;
+```
+
+### Section
+The padding-bottom CSS property sets the height of the padding area on the bottom of an element.
+
+
+```CSS
+section{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-right: 0 px;
+    padding-left: 0px;
+}
+```
+
+### max-width
+
+### .navbar.sticky .menu li a:hover
+is when your mouse hover the area
+
+### 
+```css
+@keyframes img-load {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+```
+
+### font-weight
+The font-weight CSS property sets the weight (or boldness) of the font. The weights available depend on the font-family that is currently set.
+
+### linear-gradient
+The linear-gradient() CSS function creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the ```<gradient>``` data type, which is a special kind of ```<image>```.
+
+
 
 ## Conclusion
 There are many data types (values) in CSS, and many different measurement units for each value.

@@ -5,6 +5,15 @@ We are finally jumping to the next step of learning CSS!
 -Prefer em and rem over percentages, because me is meant for font so it's semantically cleaner
 - Use rem to avoid compounding sizes
 
+## Acknowledgement
+
+This material is derived from Professor Powell's CSE 134 lecture slides at UC San Diego.
+
+## Version of CSS
+These are usually to make sure that the browser gets a new version when the site gets updated with a new version, e.g. as part of our build process we'd have something like this:
+```CSS
+    <link rel="stylesheet" href="style.css?v=6">
+```
 ## CSS Layout
 
 
@@ -12,6 +21,31 @@ We are finally jumping to the next step of learning CSS!
 - Flexbox lets us layout content in a 1-D contect where the items can flex to fill additional spaceor shrink to fit smaller places
 - Grid lets us layout content in a 2-D context. This allows us to dynamically organize our content into rows and columns
 
+Before starting this section, let's take a look at some terminology:
+![terminologies of flexbox and grid](/imgs/terminologies%20of%20flexbox%20and%20grid.png)
+> Note that a flex item can also be a flex container for items within itself.
+
+### Container Peoperties: display and flex-direction
+- display
+    - Values: flex or inline-flex
+    - Function: Establishes an element as a flexbox container. flex sets the elemnt as a block, inline-flex sets the element as inline.
+- flex-direction
+    - Values: row, row-reverse, column, column-reverse
+    - Function: Specifies the direction that the items within the container flow.
+
+### Container Property: flex-wrap
+- Values: nowrap, wrap, wrap-reverse
+- Function: Controls whether the flex container is single-line or multi-line, as well as the direction of the cross-axis
+- Note: wrap and wrap-reverse will try to preserve item width ( in a fixed width container), nowrap will either squish items or let them overflow.
+
+### Container Property: flex-flow
+- flex-flow
+    - Values: <>
+
+## Container Property: justify-content 
+- justify-content 
+    -Values: flex-start, flex-end, center, space-between, space-around
+    ![demo](/imgs/demo%20of%20justify-content.png)
 ## Flexbox
 
 ## CSS Units 
@@ -199,4 +233,65 @@ a function hsl() that accepts 3 parameters for the hue, saturation, and lightnes
     - You start at 50% with the raw normal color. 
         - Anything higher think about it like you are adding white paint making it lighter until you have pure white at 100%
         - Anything lower than 50 think about it like you are adding black paint until you eventually have pure black at 0%. 
-        
+
+- hasla() also accepts an alpha value
+
+### Color-Various New Color Functions
+Currently support for these is fairly limited ourside of Safari beta, but they are on the horizon. All support alpha values
+- hwb() 
+    - Hue, Whiteness, and Blackness. Like HSL, this is aimed at having a more human friendly color space.
+- lab()
+    - Lightness, then a and b stand for the coordinates along the a and b axis of the lab color space.
+    - Aimed at better replicating the human eye's perception of color
+- lch() 
+    - Lightness, Chroma, and Hue. Similar to lab, this color space is also aimed at replicating the human eye's perception of color.
+- color()
+    - The general color function allows a color to be set in a specified color space
+    - There are several predefined color spaces such as strgb, display-p3. and rec2020.
+- device-cmyk()
+    - In the scenario that a given printer has not been calibrated but specific ink combinations are known through experimentation, this function lets you specify CMYK colors in a device-dependent way.
+
+
+### Images
+The image data type can be used wherever images are valid, usually background.
+- It can be a url function (url()) to an actual image or it can be a gradient.
+### Position
+The position data type consists of a set of 2D coordinates used to position an item.
+-It can contain keywords (top, left, bottom, right, and center) as well as lengths (400px, 4in, etc)
+- The first value sets the horizontal position and the second value sets the vertical position.
+
+ Ex.
+```CSS
+    background-position: right 100px
+```
+
+### Identifiers
+They are not strings and as such should not be quoted.
+Depending on the CSS property, different identifiers would be valid. For example, you should set 
+```text-align:center```.
+
+### Strings
+There are scenarios in which we want to use a string literal in CSS. For instance, setting the content may require the use of a string.
+To ensure proper differentiation from identifiers, all strings in CSS should be quoted.
+### Functions
+CSS has a number of built-in functions, including ones we have seen such as rgb(), hsl(), and url().
+- THe functions look and behave similarly to those in other languages - it will consist of a function name and arguments contained in parentheses. 
+
+Some useful CSS functions include:
+- calc() - performs a calculation (using + - * /)
+- min() - selects the smallest parameter (can use +-*/)
+- max() - selects the largest parameter (can use +-*/)
+- clamp() - clamps a value between an upper and lower bound (can use +-*/)
+- attr() - retrieves the value of an attribute 
+
+### Value combinations
+- && separates two or more components, all of which must occur, in any order
+- || (double bar) separates two or more options, one or more of which must occur, in any order
+- | (single bar) separates two or more options, exactly one of which must occur
+- [ ] can be used to group components 
+
+## Conclusion
+There are many data types (values) in CSS, and many different measurement units for each value.
+There are many different unit types, most notably absolute and relative units.
+There are enumerated identifiers in CSS that appear to be strings but are not quoted. Strings in CSS exist, and must be either single or double quoted.
+CSS has a number of built in functions, include those for color and calculations.

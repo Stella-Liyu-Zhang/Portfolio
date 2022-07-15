@@ -20,6 +20,142 @@ Same for JavaScript:
 ```html
     <script src="script.js?v=5"></script>
 ```
+## CSS Notes in my Portfolio Project 
+I practice CSS syntaxes and logics by building my portfolio website!
+Here are some notes that I made in order to track what I learned throughout the whole dev process.
+### The basic HTML Tree of my website:
+- ```<head>``` part, where we 
+    - link the style sheet and script APIs.
+    - specify the metadata
+    - Specify the title and the image/x-icon!
+- ```<body>``` part, where we have 
+    - navbar, including
+        - logo ("stella zhang" home title)
+        - menu (including all the 6 sections in ```<main>```).
+    - ```<main>``` , where we have multiple sections, including 
+        - About
+            - column left
+                - image
+            - column right 
+                - text-1: "Hello, I'm Stella!"
+                - body:
+                - LinkedIn and GitHub
+        - Skills
+        - Experiences
+        - Projects
+        - Art
+        - Contact
+- ```<footer>``` part
+### "*" 
+The * means "all elements" (a universal selector), so we are setting all elements to have zero margins, and zero padding, thus making them look the same in all browsers.
+
+### Importing Google font API
+How to: 
+```css
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+font-family: 'Poppins', sans-serif;
+```
+
+### Don't forget the "rel="icon""!
+
+The rel attribute defines the relationship between the current page and the linked resource. The rel="icon" value defines the web page icon or favicon which visually represents the website. The icon URL is specified in the href attribute.
+
+```html
+    <link rel="icon" type="image/x-icon" href="websiteimgs/anime.jfif">
+```
+### Scroll-behavior of html
+```CSS
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Keyword values */
+scroll-behavior: auto;
+scroll-behavior: smooth;
+
+/* Global values */
+scroll-behavior: inherit;
+scroll-behavior: initial;
+scroll-behavior: revert;
+scroll-behavior: revert-layer;
+scroll-behavior: unset;
+```
+
+### Scroll bar 
+- ::-webkit-scrollbar — the entire scrollbar.
+- ::-webkit-scrollbar-button — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time).
+- ::-webkit-scrollbar-thumb — the draggable scrolling handle.
+- ::-webkit-scrollbar-track — the track (progress bar) of the scrollbar, where there is a gray bar on top of a white bar.
+- ::-webkit-scrollbar-track-piece — the part of the track (progress bar) not covered by the handle.
+- ::-webkit-scrollbar-corner — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet. This is often the bottom-right corner of the browser window.
+- ::-webkit-resizer — the draggable resizing handle that appears at the bottom corner of some elements.
+
+### 
+### Grid
+To build a 2*3 grid, CSS would be
+```CSS
+.skills-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1em;
+    grid-auto-rows:100px;
+}
+```
+### Section
+The padding-bottom CSS property sets the height of the padding area on the bottom of an element.
+
+
+
+```CSS
+section{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-right: 0 px;
+    padding-left: 0px;
+}
+```
+
+### max-width
+
+### .navbar.sticky .menu li a:hover
+
+is when your mouse hover the area
+
+### translateY() function
+The translateY() CSS function repositions an element vertically on the 2D plane. Its result is a <transform-function> data type.
+
+```css
+@keyframes img-load {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes button-load {
+    0% {
+        transform: translateX(300%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+```
+### z-index
+### display:flex
+### padding-top, padding bottom
+
+### font-weight
+The font-weight CSS property sets the weight (or boldness) of the font. The weights available depend on the font-family that is currently set.
+
+### linear-gradient
+The linear-gradient() CSS function creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the ```<gradient>``` data type, which is a special kind of ```<image>```.
+
+
+
 ## CSS Layout
 
 
@@ -295,116 +431,6 @@ Some useful CSS functions include:
 - || (double bar) separates two or more options, one or more of which must occur, in any order
 - | (single bar) separates two or more options, exactly one of which must occur
 - [ ] can be used to group components 
-## CSS Notes in my Portfolio Project 
-I practice CSS syntaxes and logics by building my portfolio website!
-Here are some notes that I made in order to track what I learned throughout the whole dev process.
-### The basic HTML Structure of my website:
-- ```<head>``` part, where we 
-    - link the style sheet and script APIs.
-    - specify the metadata
-    - Specify the title and the image/x-icon!
-- ```<body>``` part, where we have 
-    - navbar, including
-        - logo ("stella zhang" home title)
-        - menu (including all the 6 sections in ```<main>```).
-    - ```<main>``` , where we have multiple sections, including 
-        - About
-            - column left
-                - image
-            - column right 
-                - text-1: "Hello, I'm Stella!"
-                - body:
-                - LinkedIn and GitHub
-        - Skills
-        - Experiences
-        - Projects
-        - Art
-        - Contact
-- ```<footer>``` part
-### "*" 
-The * means "all elements" (a universal selector), so we are setting all elements to have zero margins, and zero padding, thus making them look the same in all browsers.
-
-### Importing Google font API
-How to: 
-```css
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-
-font-family: 'Poppins', sans-serif;
-```
-
-### Don't forget the "rel="icon""!
-
-The rel attribute defines the relationship between the current page and the linked resource. The rel="icon" value defines the web page icon or favicon which visually represents the website. The icon URL is specified in the href attribute.
-
-```html
-    <link rel="icon" type="image/x-icon" href="websiteimgs/anime.jfif">
-```
-### Scroll-behavior
-```CSS
-
-html{
-    scroll-behavior: smooth;
-}
-
-/* Keyword values */
-scroll-behavior: auto;
-scroll-behavior: smooth;
-
-/* Global values */
-scroll-behavior: inherit;
-scroll-behavior: initial;
-scroll-behavior: revert;
-scroll-behavior: revert-layer;
-scroll-behavior: unset;
-```
-### Grid
-To build a 2*3 grid, CSS would be
-```CSS
-.skills-wrapper{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 1em;
-    grid-auto-rows:100px;
-}
-```
-### Section
-The padding-bottom CSS property sets the height of the padding area on the bottom of an element.
-
-
-```CSS
-section{
-    padding-top: 50px;
-    padding-bottom: 100px;
-    padding-right: 0 px;
-    padding-left: 0px;
-}
-```
-
-### max-width
-
-### .navbar.sticky .menu li a:hover
-is when your mouse hover the area
-
-### 
-```css
-@keyframes img-load {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-```
-
-### font-weight
-The font-weight CSS property sets the weight (or boldness) of the font. The weights available depend on the font-family that is currently set.
-
-### linear-gradient
-The linear-gradient() CSS function creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the ```<gradient>``` data type, which is a special kind of ```<image>```.
-
-
-
 ## Conclusion
 There are many data types (values) in CSS, and many different measurement units for each value.
 There are many different unit types, most notably absolute and relative units.

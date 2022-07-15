@@ -36,7 +36,7 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Stella"],
+        strings: ["Stella (Liyu) Zhang"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: false,

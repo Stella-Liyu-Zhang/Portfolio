@@ -145,6 +145,8 @@ The translateY() CSS function repositions an element vertically on the 2D plane.
 }
 ```
 ### z-index
+## fas fa-angle-up
+
 ### display:flex
 ### padding-top, padding bottom
 

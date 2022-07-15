@@ -413,6 +413,10 @@ section{
     border-style: none;
     display: flex;
     flex-wrap: wrap;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+
 }
 
 .projects .card-container .desc {

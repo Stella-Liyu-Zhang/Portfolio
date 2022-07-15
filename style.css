@@ -253,6 +253,15 @@ section{
 }
 
 /*projects styling*/
+#projects {
+    background-image: linear-gradient(rgb(221, 243, 255), white)
+}
+#interface {
+    display: none;
+    width: 500px;
+    height: 200px;
+    background-color: white;
+}
 .projects .card-container {
     display: flex;
     flex-direction: row;
@@ -260,12 +269,12 @@ section{
     border-style: none;
 }
 
-.projects .card-container .info{
+.projects .card-container .info {
     height: 400px;
-    width: 650 px;
+    width: 650px;
     border-style: none;
-    display:flex;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .projects .card-container .desc {
@@ -299,10 +308,10 @@ section{
     justify-content: space-between;
 }
 .proj-header-first{
-    padding-top: 65px;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-style: none;
 }
 .proj-title-first{
     font-size: 25px;
@@ -334,11 +343,24 @@ section{
     opacity:85%;
 }
 /*project's desc-header*/
-.desc-header{
-    padding-top: 65px;
+.desc-header {
     display: flex;
-    flex-direction:row;
-    justify-content:space-between;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(196, 219, 232);
+    height: 43px;
+    width: 275px;
+}
+
+.desc-header a {
+    padding-top: 7px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(122, 172, 199);
+    transition: all 0.5 ease;
+}
+.desc-header a:hover {
+    color: rgb(255, 255, 255);
 }
 .desc-header span{
     padding-top: 7px;
@@ -400,4 +422,53 @@ img{
 }
 .grid-wrapper .tall {
 	grid-row: span 2;
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .projects .proj-content .card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
 }

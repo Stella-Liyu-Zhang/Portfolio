@@ -296,11 +296,9 @@ I practice CSS syntaxes and logics by building my portfolio websites!
 Here are some notes that I made in order to track what I learned throughout the whole dev progress.
 
 ### "*" 
----
 The * means "all elements" (a universal selector), so we are setting all elements to have zero margins, and zero padding, thus making them look the same in all browsers.
 
 ### Importing Google font API
----
 How to: 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
@@ -308,10 +306,13 @@ How to:
 font-family: 'Poppins', sans-serif;
 ```
 
-### html
----
-The scroll-behavior CSS property sets the behavior for a scrolling box when scrolling is triggered by the navigation or CSSOM scrolling APIs.
+### Don't forget the "rel="icon""!
 
+The rel attribute defines the relationship between the current page and the linked resource. The rel="icon" value defines the web page icon or favicon which visually represents the website. The icon URL is specified in the href attribute.
+
+```html
+    <link rel="icon" type="image/x-icon" href="websiteimgs/anime.jfif">
+```
 ```CSS
 
 html{

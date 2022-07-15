@@ -9,12 +9,16 @@ We are finally jumping to the next step of learning CSS!
 
 This material is mainly derived from Professor Powell's CSE 134 lecture slides at UC San Diego.
 
-For question that I came across, I also consulted my mentor *Cam
+For question that I came across, I also consulted my mentor *Camdyn Rasque*.
 
-## Version of CSS
+## Version of CSS and JavaScript:
 These are usually to make sure that the browser gets a new version when the site gets updated with a new version, e.g. as part of our build process we'd have something like this:
-```CSS
+```html
     <link rel="stylesheet" href="style.css?v=6">
+```
+Same for JavaScript:
+```html
+    <script src="script.js?v=5"></script>
 ```
 ## CSS Layout
 
@@ -292,9 +296,31 @@ Some useful CSS functions include:
 - | (single bar) separates two or more options, exactly one of which must occur
 - [ ] can be used to group components 
 ## CSS Notes in my Portfolio Project 
-I practice CSS syntaxes and logics by building my portfolio websites!
-Here are some notes that I made in order to track what I learned throughout the whole dev progress.
-
+I practice CSS syntaxes and logics by building my portfolio website!
+Here are some notes that I made in order to track what I learned throughout the whole dev process.
+### The basic HTML Structure of my website:
+- ```<head>``` part, where we 
+    - link the style sheet and script APIs.
+    - specify the metadata
+    - Specify the title and the image/x-icon!
+- ```<body>``` part, where we have 
+    - navbar, including
+        - logo ("stella zhang" home title)
+        - menu (including all the 6 sections in ```<main>```).
+    - ```<main>``` , where we have multiple sections, including 
+        - About
+            - column left
+                - image
+            - column right 
+                - text-1: "Hello, I'm Stella!"
+                - body:
+                - LinkedIn and GitHub
+        - Skills
+        - Experiences
+        - Projects
+        - Art
+        - Contact
+- ```<footer>``` part
 ### "*" 
 The * means "all elements" (a universal selector), so we are setting all elements to have zero margins, and zero padding, thus making them look the same in all browsers.
 
@@ -313,6 +339,7 @@ The rel attribute defines the relationship between the current page and the link
 ```html
     <link rel="icon" type="image/x-icon" href="websiteimgs/anime.jfif">
 ```
+### Scroll-behavior
 ```CSS
 
 html{
@@ -330,7 +357,16 @@ scroll-behavior: revert;
 scroll-behavior: revert-layer;
 scroll-behavior: unset;
 ```
-
+### Grid
+To build a 2*3 grid, CSS would be
+```CSS
+.skills-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1em;
+    grid-auto-rows:100px;
+}
+```
 ### Section
 The padding-bottom CSS property sets the height of the padding area on the bottom of an element.
 

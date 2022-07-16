@@ -88,6 +88,7 @@ section{
     font-family: 'Ubuntu', sans-serif;
     padding-top:15px;
     color:white;
+    text-align: center
 }
 
 
@@ -522,7 +523,13 @@ section{
 #art {
     background-color: white;
 }
+/*contact styling*/
+.contact .max-width{
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: middle;
 
+}
 /*footer styling*/
 
 footer{

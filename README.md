@@ -23,7 +23,7 @@ Same for JavaScript:
 ## CSS Notes in my Portfolio Project 
 I practice CSS syntaxes and logics by building my portfolio website!
 Here are some notes that I made in order to track what I learned throughout the whole dev process.
-### The basic HTML Tree of my website:
+### The HTML Tree of my website:
 - ```<head>``` part, where we 
     - link the style sheet and script APIs.
     - specify the metadata
@@ -41,9 +41,17 @@ Here are some notes that I made in order to track what I learned throughout the 
                 - body:
                 - LinkedIn and GitHub
         - Skills
-        - Experiences
+        - SWE and PM Experiences
+        - Academia Experience
         - Projects
-        - Art
+            - Left: the demoing Google slides/picture
+            - Right:
+                - Time length
+                - Description
+                - View Project's project link.
+        - Gallery
+            - Big pictures/vids
+            - Tall pictures
         - Contact
 - ```<footer>``` part
 ### "*" 
@@ -56,7 +64,19 @@ How to:
 
 font-family: 'Poppins', sans-serif;
 ```
-
+### grid-row and grid-column
+Make "item1" start on row 1 and span 2 rows:
+```css
+.item1 {
+  grid-row: 1 / span 2;
+}
+```
+Make "item1" start on column 1 and span 2 columns:
+```css
+.item1 {
+  grid-column: 1 / span 2;
+}
+```
 ### Don't forget the "rel="icon""!
 
 The rel attribute defines the relationship between the current page and the linked resource. The rel="icon" value defines the web page icon or favicon which visually represents the website. The icon URL is specified in the href attribute.

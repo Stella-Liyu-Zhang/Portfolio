@@ -22,6 +22,8 @@ Same for JavaScript:
 ```
 ## CSS Notes in my Portfolio Project 
 I practice CSS syntaxes and logics by building my portfolio website!
+The website is published **[HERE](https://stella-liyu-zhang.github.io/Portfolio/)**!
+
 Here are some notes that I made in order to track what I learned throughout the whole dev process.
 ### The HTML Tree of my website:
 - ```<head>``` part, where we 

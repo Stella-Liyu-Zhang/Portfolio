@@ -52,8 +52,7 @@ Here are some notes that I made in order to track what I learned throughout the 
                 - Description
                 - View Project's project link.
         - Gallery
-            - Big pictures/vids
-            - Tall pictures
+            - pictures/videos
         - Contact
 - ```<footer>``` part
 ### "*" 

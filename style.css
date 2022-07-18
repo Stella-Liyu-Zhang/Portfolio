@@ -376,18 +376,21 @@ section{
 }
 /*Experiences styling*/
 #experience{
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255, 255, 255);
 
 }
 .experience-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 8em;
+    grid-auto-rows: 12em;
     column-gap: 4em;
     padding: 2em;
 }
 .experience-wrapper a{
     color:rgb(32, 124, 230);
+}
+.experience-wrapper div{
+    background-color: white;
 }
 #experience h2{
     color:rgb(60,60, 60);
@@ -596,7 +599,7 @@ img{
   }
   .eight{
     grid-column: 4;
-    grid-row: 4;
+    grid-row: 4 ;
   }
   .nine{
     grid-column: 2 / 4;

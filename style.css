@@ -364,8 +364,8 @@ section{
 .skills-wrapper{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 8em;
-    column-gap: 3em;
+    grid-auto-rows: 18rem;
+    column-gap: 30em;
 }
 #skills{
     background-color: white;
